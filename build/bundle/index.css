@@ -1,0 +1,330 @@
+@charset "UTF-8";
+@keyframes logo-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-2em); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes logotitle-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(2em); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes divide-scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg); }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg); }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg); }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg); }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg); } }
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1; }
+  25%,
+  75% {
+    opacity: 0; } }
+
+body,
+div,
+h1,
+h2,
+li,
+p {
+  font-family: "\5FAE\8EDF\6B63\9ED1\9AD4"; }
+
+header {
+  text-align: center;
+  padding: 6.5em 5em 5em;
+  background-image: url(3YT1Voy.png);
+  background: #ECFFFF; }
+  header h1 {
+    display: inline-block;
+    margin-right: 1em;
+    font-size: 3.3em;
+    font-family: cursive;
+    color: #1AC1C1; }
+  header .logo {
+    width: 350px;
+    display: inline-block;
+    padding: 0 2.8em;
+    overflow: hidden;
+    position: relative;
+    top: 10px; }
+    header .logo img {
+      width: 100%; }
+    header .logo.Me {
+      padding: 0;
+      margin: 0 3.8em;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: 0 0 12px 4px #EFDE4E;
+      transform: translateY(15px); }
+      header .logo.Me img {
+        opacity: 1;
+        animation: none; }
+  header .divide {
+    opacity: 0;
+    animation: divide-scale-in 0.3s 0.5s forwards;
+    display: inline-block;
+    width: 3px;
+    height: 68px;
+    background: linear-gradient(to top, #FF9E9E, #62B2D8, #5FDAFF);
+    position: relative;
+    top: 14px; }
+  header .menu {
+    margin-top: 5em; }
+    header .menu li {
+      display: inline-block;
+      padding: 0.5em 0.8em;
+      font-size: 1.6em;
+      color: #7C8388;
+      position: relative;
+      margin: 0 23px; }
+      header .menu li:before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: #FFEB3B;
+        display: block;
+        position: absolute;
+        left: -6px;
+        top: 15px;
+        transition: 0.3s all;
+        transition-timing-function: ease-in-out; }
+      header .menu li:hover:before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background: rgba(255, 235, 59, 0.31);
+        box-shadow: 0 2px 3px -1px #fdf7be; }
+
+article {
+  overflow: hidden;
+  background-image: url(3YT1Voy.png);
+  background: #ECFFFF; }
+  article .container {
+    width: 75%;
+    margin: 5em auto;
+    max-width: 1300px; }
+    article .container .title {
+      font-size: 2.8em;
+      position: relative;
+      display: inline-block; }
+      article .container .title i {
+        color: #3C9ECE; }
+      article .container .title:before {
+        content: ">";
+        width: 12px;
+        height: 2px;
+        color: #209CFF;
+        display: block;
+        position: absolute;
+        left: -40px;
+        bottom: 46px; }
+      article .container .title:after {
+        content: "";
+        width: 0.6em;
+        height: 3px;
+        background: rgba(80, 177, 255, 0.78);
+        display: block;
+        position: absolute;
+        right: -27px;
+        bottom: 3px;
+        animation: blink 1.2s;
+        animation-direction: normal;
+        animation-iteration-count: infinite; }
+    article .container .feature {
+      width: 80%;
+      margin: 13.5em auto 4em;
+      background: white;
+      padding: 4em 2em 2em;
+      position: relative;
+      box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1); }
+      article .container .feature.addition {
+        margin: 4em auto;
+        padding: 5px 2em;
+        font-size: 1.5em;
+        line-height: 2;
+        background: transparent;
+        border-left: 7px solid #03A9F4;
+        box-shadow: -3px 0 0 #226E90; }
+      article .container .feature.conclude {
+        font-size: 1.5em;
+        line-height: 2;
+        background: transparent;
+        box-shadow: initial;
+        border: 2px solid #C19F3D;
+        margin: 4em auto;
+        padding: 2em;
+        border-radius: 8px;
+        color: #524F45; }
+      article .container .feature .logo.Me {
+        display: inline-block;
+        padding: 0;
+        margin: 0 3.8em;
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 50%;
+        box-shadow: 0 0 12px 4px #EFDE4E;
+        transform: translateY(15px);
+        position: absolute;
+        top: -105px;
+        left: 12px; }
+        article .container .feature .logo.Me img {
+          width: 100%; }
+      article .container .feature .item {
+        clear: both;
+        font-size: 1.5em;
+        overflow: hidden; }
+        article .container .feature .item p {
+          float: left;
+          width: 25%; }
+        article .container .feature .item p:first-child {
+          font-size: 0.8em;
+          color: #9A9A9A;
+          margin-top: 6px; }
+        article .container .feature .item p:last-child {
+          width: 75%;
+          padding-left: 1em; }
+        article .container .feature .item i.fa-trophy {
+          color: #FFD744;
+          transform: rotate(2deg) translateY(-2px) scale(1.2);
+          margin-right: 12px; }
+    article .container .row {
+      margin-top: 5em;
+      clear: both;
+      overflow: hidden; }
+      article .container .row .skills {
+        width: 33.333%;
+        float: left; }
+        article .container .row .skills img {
+          position: relative;
+          z-index: 2000;
+          width: 7em; }
+        article .container .row .skills .sk {
+          margin-left: 1em;
+          margin-right: 1em;
+          background: #B4FFE6;
+          padding: 4.3em 2em 2em;
+          position: relative;
+          top: -49px;
+          border-radius: 6px;
+          box-shadow: 0 5px 0 #84DEC0; }
+          article .container .row .skills .sk span {
+            margin: 5px;
+            border-bottom: 3px solid #FFE774;
+            padding-bottom: 4px;
+            line-height: 2.5; }
+    article .container .timeline {
+      margin-top: 5em;
+      margin-bottom: 3.5em;
+      position: relative;
+      overflow: hidden; }
+      article .container .timeline:before {
+        content: "";
+        width: 5px;
+        height: 100%;
+        background: #209CFF;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        border-radius: 5px; }
+      article .container .timeline .time {
+        clear: both;
+        float: left;
+        width: 50%;
+        padding: 2em 5em 2em 2em;
+        position: relative; }
+        article .container .timeline .time:before {
+          content: "";
+          width: 25px;
+          height: 25px;
+          background: #209CFF;
+          display: block;
+          position: absolute;
+          right: -15px;
+          top: 25%;
+          border-radius: 30px;
+          border: 7px solid #FFC902; }
+        article .container .timeline .time:nth-child(even) {
+          float: right;
+          padding: 2em 2em 2em 5em; }
+          article .container .timeline .time:nth-child(even):before {
+            right: initial;
+            left: -10px; }
+        article .container .timeline .time > div {
+          background: white;
+          padding: 2em;
+          box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05) inset; }
+          article .container .timeline .time > div div {
+            font-size: 1.3em;
+            line-height: 1.3; }
+
+@media screen and (max-width: 839px) {
+  header .divide,
+  header .logo {
+    display: none; }
+  header h1 {
+    margin-right: 0; }
+  article .container {
+    width: 85%; }
+    article .container .feature {
+      width: 100%; } }
+
+@media screen and (max-width: 739px) {
+  header {
+    padding: 6.5em 0 2em; }
+  article .container .row .skills {
+    width: 80%;
+    float: initial;
+    margin: auto; }
+  article .container .timeline:before {
+    left: 13px; }
+  article .container .timeline .time {
+    width: 100%;
+    padding: 1.2em 1.2em 1.2em 4em; }
+    article .container .timeline .time:nth-child(even) {
+      padding: 1.2em 1.2em 1.2em 4em; }
+      article .container .timeline .time:nth-child(even):before {
+        left: 3px; }
+    article .container .timeline .time:before {
+      left: 3px; } }
+
+/*# sourceMappingURL=index.css.map*/
