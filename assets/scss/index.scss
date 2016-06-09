@@ -65,14 +65,14 @@ header {
     top: 14px;
   }
   .menu {
-    margin-top: 5em;
+    margin-top: 4.5em;
     li {
       display: inline-block;
       padding: 0.5em 0.8em;
       font-size: 1.6em;
       color: #7C8388;
       position: relative;
-      margin: 0 23px;
+      margin: 0.5em 23px 0;
       &:before {
         content: "";
         width: 12px;
@@ -115,12 +115,12 @@ article {
       &:before {
         content: ">";
         width: 12px;
-        height: 2px;
         color: #209CFF;
         display: block;
         position: absolute;
         left: -40px;
-        bottom: 46px;
+        top: 0;
+        line-height: 1.25em;
       }
       &:after {
         content: "";
@@ -313,6 +313,9 @@ article {
       width: 80%;
       float: initial;
       margin: auto;
+    }
+    .title {
+      margin-left: 0.5em;
     }
     .timeline {
       &:before {
